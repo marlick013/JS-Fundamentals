@@ -1,11 +1,9 @@
-function factorial(n) {
-    if (isNaN(n) || n <0) {
-        return 1;
-    }
-if (n === 0 || n === 1){return 1;
-}
-return n * factorial(n - 1);
-} 
+const args = process.argv.slice(2);
 
-const arg = parseInt(process.argv[2]);
-console.log(factorial(arg));
+if (args.length === 0) {
+  console.log("No argument");
+} else if (args.length === 1) {
+  console.log("Argument found");
+} else {
+  console.log("Arguments found");
+}
